@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubhi Gupta | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="#hero" class="logo">Shubhi<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="./resume.pdf" class="btn-resume">Resume</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Portfolio</p>
+        <h1 class="hero-name">Hi, I'm<br><span class="highlight">Shubhi Gupta</span></h1>
+        <p class="hero-desc">B.Tech CSE (AI) Student · Full-Stack Developer &amp; AI Enthusiast<br>
+          Building elegant, scalable solutions at the intersection of Intelligence and the Web.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary"><i class="fas fa-eye"></i> View Projects</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Shubhii05" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/shubhigupta0504" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:shubhigupta775@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-wrap">
+          <img src="./img/shubhi.jpg" alt="Shubhi Gupta" />
+          <div class="hero-image-ring"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">MY JOURNEY</div>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h3>Education</h3>
+          <div class="edu-cards">
+            <div class="edu-card reveal">
+              <div>
+                <div class="edu-degree">B.Tech CSE (AI)</div>
+                <div class="edu-school">KIET Group of Institutions, Ghaziabad</div>
+                <div class="edu-grade">CGPA 8.22</div>
+              </div>
+              <span class="edu-year">2023–2027</span>
+            </div>
+            <div class="edu-card reveal">
+              <div>
+                <div class="edu-degree">Intermediate (12th)</div>
+                <div class="edu-school">Aligarh Muslim University</div>
+                <div class="edu-grade">93.5%</div>
+              </div>
+              <span class="edu-year">2022</span>
+            </div>
+            <div class="edu-card reveal">
+              <div>
+                <div class="edu-degree">High School (10th)</div>
+                <div class="edu-school">Aligarh Muslim University</div>
+                <div class="edu-grade">97.8%</div>
+              </div>
+              <span class="edu-year">2020</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="reveal">
+            <h3>Soft Skills</h3>
+            <div class="soft-tags">
+              <span class="soft-tag">Leadership</span>
+              <span class="soft-tag">Teamwork</span>
+              <span class="soft-tag">Public Speaking</span>
+              <span class="soft-tag">Problem Solving</span>
+              <span class="soft-tag">Event Management</span>
+            </div>
+          </div>
+          <div class="cert-box reveal">
+            <h3>Certifications</h3>
+            <ul>
+              <li>AWS Certified Cloud Practitioner (2025)</li>
+              <li>Palo Alto Networks Certified Network Security Administrator (2024)</li>
+            </ul>
+          </div>
+          <div class="cert-box reveal">
+            <h3>🎭 Extracurricular</h3>
+            <ul>
+              <li>Club Member, Vpaksh — KIET Dramatics Society (2023–Present)</li>
+              <li>Winner — EPOQUE &amp; Prastuti events (2023)</li>
+              <li>1st Prize in Skit &amp; Nukkad at IIT Jodhpur &amp; IIT Roorkee</li>
+              <li>Managed 300+ audience members across live performances</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">MY WORK</div>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Distributed Video Processing -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <!-- ChronoQueue dashboard — no browser chrome, show from top -->
+            <img src="./img/distributed.png" alt="Distributed Video Processing Platform" style="object-position: center top;" />
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Redis</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">Distributed Systems</span>
+            </div>
+            <div class="project-name">Distributed Video Processing Platform</div>
+            <p class="project-desc">
+              Production-style distributed task queue for async video processing — Redis-backed job scheduling, 
+              exponential backoff retry, horizontal worker scaling, and real-time status via REST API.
+            </p>
+            <a href="https://github.com/Shubhii05/ChronoQueue" target="_blank" class="btn-view-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Resume Matcher -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <!-- Resume Matcher — has Edge browser chrome ~120px tall, skip it -->
+            <img src="./img/rmatcher.png" alt="Resume Matcher" style="object-position: center 28%;" />
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">C++</span>
+              <span class="project-tag">Crow</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">Docker</span>
+            </div>
+            <div class="project-name">AI-Based Resume Matcher</div>
+            <p class="project-desc">
+              C++ powered resume analysis system with ATS-style skill scoring, keyword extraction using STL, 
+              modular OOP architecture, and a deployed React frontend.
+            </p>
+            <a href="https://github.com/Shubhii05/cpp-resume-matcher" target="_blank" class="btn-view-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Restaurant App -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <!-- Cafe site — clean, no chrome, show from top -->
+            <img src="./img/cafe.png" alt="Delighted Cafe" style="object-position: center top;" />
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Bootstrap</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-name">Delighted — Restaurant Web App</div>
+            <p class="project-desc">
+              Full-stack restaurant web app with secure user authentication, table reservation system 
+              with real-time availability, and a pixel-perfect responsive UI.
+            </p>
+            <a href="YOUR_LINK_HERE" target="_blank" class="btn-view-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">MY ARSENAL</div>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+
+      <div class="skills-bento">
+
+        <!-- Languages -->
+        <div class="skill-category skill-cat-languages reveal">
+          <div class="skill-cat-title">
+            <span class="cat-icon">💻</span> Languages
+          </div>
+          <div class="skill-items">
+            <span class="skill-item skill-featured"><span class="skill-icon">⚙️</span> C++ (STL)</span>
+            <span class="skill-item" data-level="high">JavaScript</span>
+            <span class="skill-item">C</span>
+          </div>
+        </div>
+
+        <!-- Core Engineering -->
+        <div class="skill-category skill-cat-core reveal">
+          <div class="skill-cat-title">
+            <span class="cat-icon">🔧</span> Core Engineering
+          </div>
+          <div class="skill-items">
+            <span class="skill-item" data-level="high">Distributed Systems</span>
+            <span class="skill-item" data-level="high">Data Structures &amp; Algorithms</span>
+            <span class="skill-item">REST APIs</span>
+            <span class="skill-item">OOP &amp; STL</span>
+            <span class="skill-item">Operating Systems</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-category skill-cat-web reveal">
+          <div class="skill-cat-title">
+            <span class="cat-icon">🌐</span> Web Dev
+          </div>
+          <div class="skill-items">
+            <span class="skill-item" data-level="high">React</span>
+            <span class="skill-item">Crow (C++)</span>
+            <span class="skill-item">HTML / CSS</span>
+            <span class="skill-item">Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Cloud & Tools -->
+        <div class="skill-category skill-cat-cloud reveal">
+          <div class="skill-cat-title">
+            <span class="cat-icon">☁️</span> Cloud &amp; Tools
+          </div>
+          <div class="skill-items">
+            <span class="skill-item" data-level="high">AWS ☁️</span>
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">Redis</span>
+            <span class="skill-item">Git / GitHub</span>
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">VS Code</span>
+            <span class="skill-item">CMake</span>
+          </div>
+        </div>
+
+        <!-- Certifications strip -->
+        <div class="cert-strip reveal">
+          <div class="cert-card">
+            <div class="cert-badge">☁️</div>
+            <div class="cert-info">
+              <div class="cert-name">AWS Certified Cloud Practitioner</div>
+              <div class="cert-org">Amazon Web Services · 2025</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-badge">🔒</div>
+            <div class="cert-info">
+              <div class="cert-name">Palo Alto Networks PCNSA</div>
+              <div class="cert-org">Palo Alto Networks · 2024</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">GET IN TOUCH</div>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-card reveal">
+          <h3>Let's Connect</h3>
+          <p>I'm always open to discussing new opportunities, collaborations, or just a friendly chat!</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <span>shubhigupta775@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+              <span>linkedin.com/in/shubhigupta0504</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+              <span>github.com/Shubhii05</span>
+            </div>
+          </div>
+          <a href="./resume.pdf" download class="btn-download-resume">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="contact-form-card reveal">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Your last name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Write your message..."></textarea>
+            </div>
+            <button type="submit" class="btn-send">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-socials">
+        <a href="https://github.com/Shubhii05" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shubhigupta0504" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:shubhigupta775@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">Made with <span>♡</span> by Shubhi Gupta <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
