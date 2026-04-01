@@ -762,6 +762,9 @@ section { padding: 90px 6%; }
   gap: 40px;
   align-items: start;
 }
+.contact-grid > * {
+  min-width: 0;
+}
 .contact-info-card {
   background: linear-gradient(135deg, var(--purple) 0%, #6d28d9 100%);
   color: #fff;
@@ -786,6 +789,13 @@ section { padding: 90px 6%; }
   align-items: center;
   gap: 14px;
   font-size: 0.9rem;
+  min-width: 0;
+}
+.contact-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.55;
 }
 .contact-item-icon {
   width: 38px; height: 38px;
@@ -985,6 +995,18 @@ footer {
     width: min(74vw, 280px);
     height: min(74vw, 280px);
     border-radius: 999px;
+  }
+  .contact-info-card,
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+  .contact-item {
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .btn-download-resume {
+    padding: 13px 18px;
+    font-size: 0.88rem;
   }
   .projects-grid { grid-template-columns: 1fr; }
   .skills-bento { display: flex; flex-direction: column; }
