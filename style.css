@@ -288,8 +288,8 @@ body {
   animation: fadeIn 0.8s ease forwards 0.4s;
 }
 .hero-image-wrap {
-  width: 380px; height: 470px;
-  border-radius: 190px;
+  width: 400px; height: 400px;
+  border-radius: 130px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--purple-soft), #ddd6fe);
   border: 5px solid #fff;
@@ -299,7 +299,7 @@ body {
 .hero-image-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 10%;
 }
 .hero-image-ring {
   position: absolute;
@@ -959,7 +959,7 @@ footer {
   .hero-desc { max-width: 100%; }
   .hero-btns { justify-content: center; }
   .hero-socials { justify-content: center; }
-  .hero-image-wrap { width: 260px; height: 320px; border-radius: 140px; }
+  .hero-image-wrap { width: 260px; height: 260px; border-radius: 50%; }
   .about-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
@@ -983,10 +983,9 @@ footer {
   }
   .hero-image-wrap {
     width: min(74vw, 280px);
-    height: min(92vw, 360px);
+    height: min(74vw, 280px);
     border-radius: 999px;
   }
-  .hero-image-wrap img { object-position: center 16%; }
   .projects-grid { grid-template-columns: 1fr; }
   .skills-bento { display: flex; flex-direction: column; }
 }
