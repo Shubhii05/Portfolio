@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shubhi Gupta — B.Tech CSE (AI) student, Full-Stack Developer & AI Enthusiast. Portfolio showcasing projects in distributed systems, C++, React and cloud." />
+  <meta property="og:title" content="Shubhi Gupta | Portfolio" />
+  <meta property="og:description" content="Full-Stack Developer & AI Enthusiast building elegant, scalable solutions." />
   <title>Shubhi Gupta | Portfolio</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- Background layers -->
+  <div id="bg-stripes" aria-hidden="true"></div>
+  <div id="bg-grain" aria-hidden="true"></div>
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar">
@@ -19,21 +29,36 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="./resume.pdf" class="btn-resume">Resume</a></li>
+      <li><a href="./resume.pdf" class="btn-resume" target="_blank">Resume</a></li>
     </ul>
-    <div class="hamburger">
+    <div class="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
       <span></span><span></span><span></span>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
   <section id="hero">
+    <!-- Decorative floating shapes -->
+    
+   
+    <div class="hero-hex" aria-hidden="true"></div>
+
     <div class="hero-inner">
       <div class="hero-text">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Available for Internships
+        </div>
         <p class="hero-greeting">Portfolio</p>
         <h1 class="hero-name">Hi, I'm<br><span class="highlight">Shubhi Gupta</span></h1>
-        <p class="hero-desc">B.Tech CSE (AI) Student · Full-Stack Developer &amp; AI Enthusiast<br>
-          Building elegant, scalable solutions at the intersection of Intelligence and the Web.</p>
+        <p class="hero-desc">B.Tech CSE (AI) Student | Full-Stack Developer & AI Enthusiast
+Focused on building responsive, scalable web applications with clean UI and efficient backend systems</p>
+        <!-- Typing animation line -->
+        <div class="hero-typing-wrap">
+          <span class="hero-typing-prefix">&gt;&nbsp;</span>
+          <span class="hero-typing" id="typingText"></span>
+          <span class="hero-cursor">|</span>
+        </div>
         <div class="hero-btns">
           <a href="#projects" class="btn-primary"><i class="fas fa-eye"></i> View Projects</a>
           <a href="#contact" class="btn-outline">Contact Me</a>
@@ -44,10 +69,12 @@
           <a href="mailto:shubhigupta775@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
+
       <div class="hero-image">
+    
+        <div class="hero-orbit-2" aria-hidden="true"></div>
         <div class="hero-image-wrap">
           <img src="./img/shubhi.jpg" alt="Shubhi Gupta" />
-          <div class="hero-image-ring"></div>
         </div>
       </div>
     </div>
@@ -58,7 +85,7 @@
     <div class="section-inner">
       <div class="section-header">
         <div class="section-tag">MY JOURNEY</div>
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About <em>Me</em></h2>
       </div>
       <div class="about-grid">
         <div class="about-left">
@@ -127,7 +154,7 @@
     <div class="section-inner">
       <div class="section-header">
         <div class="section-tag">MY WORK</div>
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Featured <em>Projects</em></h2>
       </div>
 
       <div class="projects-grid">
@@ -135,8 +162,15 @@
         <!-- Distributed Video Processing -->
         <div class="project-card reveal">
           <div class="project-img">
-            <!-- ChronoQueue dashboard — no browser chrome, show from top -->
             <img src="./img/distributed.png" alt="Distributed Video Processing Platform" style="object-position: center top;" />
+            <div class="project-top-actions">
+              <a href="https://github.com/Shubhii05/ChronoQueue" target="_blank" class="project-icon-btn" aria-label="View ChronoQueue code">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-icon-btn is-disabled" aria-disabled="true" tabindex="-1" aria-label="Live demo unavailable">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
             <div class="project-tags">
@@ -146,21 +180,36 @@
               <span class="project-tag">Distributed Systems</span>
             </div>
             <div class="project-name">Distributed Video Processing Platform</div>
-            <p class="project-desc">
-              Production-style distributed task queue for async video processing — Redis-backed job scheduling, 
-              exponential backoff retry, horizontal worker scaling, and real-time status via REST API.
-            </p>
-            <a href="https://github.com/Shubhii05/ChronoQueue" target="_blank" class="btn-view-code">
-              <i class="fab fa-github"></i> View Code
-            </a>
+            <p class="project-desc">Distributed task queue for async video processing with Redis-backed scheduling, retry handling, horizontal worker scaling, and live status updates through a REST API.</p>
+            <div class="project-factors">
+              <div class="project-factor">
+                <strong>Retry Logic</strong>
+                <span>Exponential backoff</span>
+              </div>
+              <div class="project-factor">
+                <strong>Worker Scale</strong>
+                <span>Horizontal processing</span>
+              </div>
+              <div class="project-factor">
+                <strong>Live Status</strong>
+                <span>REST API updates</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Resume Matcher -->
         <div class="project-card reveal">
           <div class="project-img">
-            <!-- Resume Matcher — has Edge browser chrome ~120px tall, skip it -->
             <img src="./img/rmatcher.png" alt="Resume Matcher" style="object-position: center 28%;" />
+            <div class="project-top-actions">
+              <a href="https://github.com/Shubhii05/cpp-resume-matcher" target="_blank" class="project-icon-btn" aria-label="View Resume Matcher code">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://cpp-resume-matcher.vercel.app" target="_blank" class="project-icon-btn" aria-label="Open Resume Matcher demo">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
             <div class="project-tags">
@@ -170,21 +219,31 @@
               <span class="project-tag">Docker</span>
             </div>
             <div class="project-name">AI-Based Resume Matcher</div>
-            <p class="project-desc">
-              C++ powered resume analysis system with ATS-style skill scoring, keyword extraction using STL, 
-              modular OOP architecture, and a deployed React frontend.
-            </p>
-            <a href="https://github.com/Shubhii05/cpp-resume-matcher" target="_blank" class="btn-view-code">
-              <i class="fab fa-github"></i> View Code
-            </a>
+            <p class="project-desc">C++ resume analysis system with ATS-style scoring, STL-based keyword extraction, modular OOP design, and a deployed React frontend for clearer job-role matching.</p>
+            <div class="project-factors">
+              <div class="project-factor">
+                <strong>ATS Scoring</strong>
+                <span>Skill-based evaluation</span>
+              </div>
+              <div class="project-factor">
+                <strong>Keyword Match</strong>
+                <span>STL-driven extraction</span>
+              </div>
+              <div class="project-factor">
+                <strong>Frontend</strong>
+                <span>Deployed React UI</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Restaurant App -->
         <div class="project-card reveal">
           <div class="project-img">
-            <!-- Cafe site — clean, no chrome, show from top -->
             <img src="./img/cafe.png" alt="Delighted Cafe" style="object-position: center top;" />
+            <div class="project-top-actions">
+              <!-- hidden when no link -->
+            </div>
           </div>
           <div class="project-content">
             <div class="project-tags">
@@ -194,13 +253,21 @@
               <span class="project-tag">JavaScript</span>
             </div>
             <div class="project-name">Delighted — Restaurant Web App</div>
-            <p class="project-desc">
-              Full-stack restaurant web app with secure user authentication, table reservation system 
-              with real-time availability, and a pixel-perfect responsive UI.
-            </p>
-            <a href="YOUR_LINK_HERE" target="_blank" class="btn-view-code">
-              <i class="fab fa-github"></i> View Code
-            </a>
+            <p class="project-desc">Restaurant web app with secure authentication, table reservations, real-time availability, and a responsive interface designed for smooth browsing and booking.</p>
+            <div class="project-factors">
+              <div class="project-factor">
+                <strong>Bookings</strong>
+                <span>Table reservation flow</span>
+              </div>
+              <div class="project-factor">
+                <strong>Availability</strong>
+                <span>Real-time table status</span>
+              </div>
+              <div class="project-factor">
+                <strong>Responsive</strong>
+                <span>Pixel-perfect UI</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -211,20 +278,76 @@
   <!-- ===== SKILLS ===== -->
   <section id="skills">
     <div class="section-inner">
-      <div class="section-header">
+      <div class="section-header skills-header">
         <div class="section-tag">MY ARSENAL</div>
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">Technical <em>Skills</em></h2>
+        <p class="skills-subcopy reveal">The technologies and engineering areas I keep reaching for while building projects, learning backend systems, and strengthening full-stack fundamentals.</p>
       </div>
+
+      <div class="skills-marquee reveal" aria-hidden="true">
+        <div class="skills-marquee-row">
+          <div class="skills-marquee-track">
+            <span class="marquee-item"><i class="devicon-cplusplus-plain"></i>C++ (STL)</span>
+            <span class="marquee-item"><i class="devicon-javascript-plain"></i>JavaScript</span>
+            <span class="marquee-item"><i class="devicon-c-plain"></i>C</span>
+            <span class="marquee-item"><i class="fas fa-network-wired"></i>Distributed Systems</span>
+            <span class="marquee-item"><i class="fas fa-diagram-project"></i>DSA</span>
+            <span class="marquee-item"><i class="fas fa-plug-circle-bolt"></i>REST APIs</span>
+            <span class="marquee-item"><i class="fas fa-cubes"></i>OOP &amp; STL</span>
+            <span class="marquee-item"><i class="fas fa-microchip"></i>Operating Systems</span>
+            <span class="marquee-item"><i class="devicon-cplusplus-plain"></i>C++ (STL)</span>
+            <span class="marquee-item"><i class="devicon-javascript-plain"></i>JavaScript</span>
+            <span class="marquee-item"><i class="devicon-c-plain"></i>C</span>
+            <span class="marquee-item"><i class="fas fa-network-wired"></i>Distributed Systems</span>
+            <span class="marquee-item"><i class="fas fa-diagram-project"></i>DSA</span>
+            <span class="marquee-item"><i class="fas fa-plug-circle-bolt"></i>REST APIs</span>
+            <span class="marquee-item"><i class="fas fa-cubes"></i>OOP &amp; STL</span>
+            <span class="marquee-item"><i class="fas fa-microchip"></i>Operating Systems</span>
+          </div>
+        </div>
+        <div class="skills-marquee-row skills-marquee-row-reverse">
+          <div class="skills-marquee-track">
+            <span class="marquee-item"><i class="devicon-react-original"></i>React</span>
+            <span class="marquee-item"><i class="devicon-cplusplus-plain"></i>Crow (C++)</span>
+            <span class="marquee-item"><i class="devicon-html5-plain"></i>HTML / CSS</span>
+            <span class="marquee-item"><i class="devicon-bootstrap-plain"></i>Bootstrap</span>
+            <span class="marquee-item"><i class="devicon-amazonwebservices-plain-wordmark"></i>AWS</span>
+            <span class="marquee-item"><i class="devicon-docker-plain"></i>Docker</span>
+            <span class="marquee-item"><i class="devicon-redis-plain"></i>Redis</span>
+            <span class="marquee-item"><i class="devicon-git-plain"></i>Git / GitHub</span>
+            <span class="marquee-item"><i class="devicon-postgresql-plain"></i>PostgreSQL</span>
+            <span class="marquee-item"><i class="devicon-mysql-plain"></i>MySQL</span>
+            <span class="marquee-item"><i class="devicon-vscode-plain"></i>VS Code</span>
+            <span class="marquee-item"><i class="devicon-cmake-plain"></i>CMake</span>
+            <span class="marquee-item"><i class="devicon-react-original"></i>React</span>
+            <span class="marquee-item"><i class="devicon-cplusplus-plain"></i>Crow (C++)</span>
+            <span class="marquee-item"><i class="devicon-html5-plain"></i>HTML / CSS</span>
+            <span class="marquee-item"><i class="devicon-bootstrap-plain"></i>Bootstrap</span>
+            <span class="marquee-item"><i class="devicon-amazonwebservices-plain-wordmark"></i>AWS</span>
+            <span class="marquee-item"><i class="devicon-docker-plain"></i>Docker</span>
+            <span class="marquee-item"><i class="devicon-redis-plain"></i>Redis</span>
+            <span class="marquee-item"><i class="devicon-git-plain"></i>Git / GitHub</span>
+            <span class="marquee-item"><i class="devicon-postgresql-plain"></i>PostgreSQL</span>
+            <span class="marquee-item"><i class="devicon-mysql-plain"></i>MySQL</span>
+            <span class="marquee-item"><i class="devicon-vscode-plain"></i>VS Code</span>
+            <span class="marquee-item"><i class="devicon-cmake-plain"></i>CMake</span>
+          </div>
+        </div>
+      </div>
+
+    
 
       <div class="skills-bento">
 
         <!-- Languages -->
         <div class="skill-category skill-cat-languages reveal">
           <div class="skill-cat-title">
-            <span class="cat-icon">💻</span> Languages
+            <span class="cat-icon"></span> Languages
           </div>
           <div class="skill-items">
-            <span class="skill-item skill-featured"><span class="skill-icon">⚙️</span> C++ (STL)</span>
+            <span class="skill-item skill-featured">
+              <span class="skill-icon">⚙️</span> C++ (STL)
+            </span>
             <span class="skill-item" data-level="high">JavaScript</span>
             <span class="skill-item">C</span>
           </div>
@@ -233,7 +356,7 @@
         <!-- Core Engineering -->
         <div class="skill-category skill-cat-core reveal">
           <div class="skill-cat-title">
-            <span class="cat-icon">🔧</span> Core Engineering
+            <span class="cat-icon"></span> Core Engineering
           </div>
           <div class="skill-items">
             <span class="skill-item" data-level="high">Distributed Systems</span>
@@ -247,7 +370,7 @@
         <!-- Web Development -->
         <div class="skill-category skill-cat-web reveal">
           <div class="skill-cat-title">
-            <span class="cat-icon">🌐</span> Web Dev
+            <span class="cat-icon"></span> Web Dev
           </div>
           <div class="skill-items">
             <span class="skill-item" data-level="high">React</span>
@@ -260,10 +383,10 @@
         <!-- Cloud & Tools -->
         <div class="skill-category skill-cat-cloud reveal">
           <div class="skill-cat-title">
-            <span class="cat-icon">☁️</span> Cloud &amp; Tools
+            <span class="cat-icon"></span> Cloud &amp; Tools
           </div>
           <div class="skill-items">
-            <span class="skill-item" data-level="high">AWS ☁️</span>
+            <span class="skill-item" data-level="high">AWS</span>
             <span class="skill-item">Docker</span>
             <span class="skill-item">Redis</span>
             <span class="skill-item">Git / GitHub</span>
@@ -301,7 +424,7 @@
     <div class="section-inner">
       <div class="section-header">
         <div class="section-tag">GET IN TOUCH</div>
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Contact <em>Me</em></h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info-card reveal">
@@ -328,32 +451,33 @@
 
         <div class="contact-form-card reveal">
           <h3>Send a Message</h3>
-          <form id="contactForm">
+          <form id="contactForm" data-form-endpoint="https://formspree.io/f/mkopeybe">
             <div class="form-row">
               <div class="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="Your first name" required />
+                <input type="text" name="firstName" placeholder="Your first name" required />
               </div>
               <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" placeholder="Your last name" required />
+                <input type="text" name="lastName" placeholder="Your last name" required />
               </div>
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="your@email.com" required />
+              <input type="email" name="email" placeholder="your@email.com" required />
             </div>
             <div class="form-group">
               <label>Subject</label>
-              <input type="text" placeholder="What's this about?" required />
+              <input type="text" name="subject" placeholder="What's this about?" required />
             </div>
             <div class="form-group">
               <label>Message</label>
-              <textarea rows="5" placeholder="Write your message..."></textarea>
+              <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
             </div>
             <button type="submit" class="btn-send">
               Send Message <i class="fas fa-paper-plane"></i>
             </button>
+            <p id="formStatus" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -364,11 +488,11 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-socials">
-        <a href="https://github.com/Shubhii05" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/shubhigupta0504" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:shubhigupta775@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Shubhii05" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shubhigupta0504" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:shubhigupta775@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
-      <p class="footer-copy">Made with <span>♡</span> by Shubhi Gupta <span id="year"></span></p>
+      <p class="footer-copy">Made with <span>♡</span> by Shubhi Gupta &nbsp;<span id="year"></span></p>
     </div>
   </footer>
 
