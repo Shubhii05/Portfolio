@@ -580,6 +580,14 @@ section { padding: 96px 6%; }
 .marquee-item .fa-cubes,
 .marquee-item .fa-microchip { color: var(--primary-dim); }
 
+/* Hide the removed legacy skills grid/cert strip even if stale HTML is cached. */
+#skills .skills-bento,
+#skills .skill-category,
+#skills .cert-strip,
+#skills .cert-card {
+  display: none !important;
+}
+
 /* ===== CONTACT ===== */
 #contact { background: var(--surface-1); position: relative; }
 #contact::before {

@@ -7,22 +7,27 @@ window.addEventListener('scroll', () => {
 // ===== HAMBURGER =====
 const hamburger = document.querySelector('.hamburger');
 const navLinks  = document.querySelector('.nav-links');
+const hamburgerBars = hamburger?.querySelectorAll('span') ?? [];
+
+const syncMenuIcon = (open) => {
+  if (hamburgerBars.length < 3) return;
+  hamburgerBars[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+  hamburgerBars[1].style.opacity = open ? '0' : '1';
+  hamburgerBars[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+};
 
 hamburger?.addEventListener('click', toggleMenu);
 hamburger?.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') toggleMenu(); });
 
 function toggleMenu() {
   const open = navLinks.classList.toggle('open');
-  const spans = hamburger.querySelectorAll('span');
-  spans[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
-  spans[1].style.opacity   = open ? '0' : '1';
-  spans[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+  syncMenuIcon(open);
 }
 
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+    syncMenuIcon(false);
   });
 });
 
@@ -39,7 +44,6 @@ const phrases = [
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let typingTimeout;
 
 function type() {
   const current = phrases[phraseIndex];
@@ -48,7 +52,7 @@ function type() {
     typingEl.textContent = current.slice(0, ++charIndex);
     if (charIndex === current.length) {
       isDeleting = true;
-      typingTimeout = setTimeout(type, 1800);
+      setTimeout(type, 1800);
       return;
     }
   } else {
@@ -56,11 +60,11 @@ function type() {
     if (charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingTimeout = setTimeout(type, 400);
+      setTimeout(type, 400);
       return;
     }
   }
-  typingTimeout = setTimeout(type, isDeleting ? 48 : 72);
+  setTimeout(type, isDeleting ? 48 : 72);
 }
 
 // Start typing after hero animation
