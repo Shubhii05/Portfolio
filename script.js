@@ -95,7 +95,13 @@ let audioReady = false;
 
 if (audio) {
   audio.volume = 0.75;
-  audio.addEventListener('canplaythrough', () => { audioReady = true; });
+  audio.addEventListener('canplaythrough', () => {
+    audioReady = true;
+    if (!isPlaying) {
+      if (titleEl) titleEl.textContent = 'Ambient · Dev Mode';
+      if (artistEl) artistEl.textContent = 'Press play to start';
+    }
+  });
   audio.addEventListener('error', () => {
     audioReady = false;
     if (artistEl) artistEl.textContent = 'Add audio/ambient.mp3';
@@ -114,14 +120,19 @@ musicBtn?.addEventListener('click', async () => {
     return;
   }
 
-  if (!audioReady && audio.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
-    if (titleEl) titleEl.textContent = 'No track loaded';
-    if (artistEl) artistEl.textContent = 'Place ambient.mp3 in /audio';
-    return;
-  }
-
   try {
-    await audio.play();
+    if (!audioReady && audio.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
+      if (titleEl) titleEl.textContent = 'Loading audio...';
+      if (artistEl) artistEl.textContent = 'audio/ambient.mp3';
+      audio.load();
+    }
+
+    await Promise.race([
+      audio.play(),
+      new Promise((_, reject) => {
+        window.setTimeout(() => reject(new Error('Audio load timed out')), 2500);
+      })
+    ]);
     musicIconEl.className = 'fas fa-pause';
     player.classList.add('music-playing');
     isPlaying = true;
@@ -129,7 +140,9 @@ musicBtn?.addEventListener('click', async () => {
     if (artistEl) artistEl.textContent = 'Now playing';
   } catch (err) {
     console.warn('Playback failed:', err);
-    if (titleEl) titleEl.textContent = 'Click to retry ▶';
+    audioReady = false;
+    if (titleEl) titleEl.textContent = 'Track unavailable';
+    if (artistEl) artistEl.textContent = 'Add ambient.mp3 in /audio';
   }
 });
 
